@@ -1,0 +1,520 @@
+Table: _Archive_CalendarOffDates
+Columns: calendarId, calendarOffDateRepeatTypeId, offDate, createdAt, createdBy, updatedAt, updatedBy, archivedAt
+Table: _Archive_Calendars
+Columns: calendarId, personId, createdAt, createdBy, updatedAt, updatedBy, archivedAt
+Table: _Archive_EnrollmentDetailCalendars
+Columns: enrollmentDetailId, calendarId, startDate, endDate, createdAt, createdBy, updatedAt, updatedBy, archivedAt        
+Table: _Archive_EnrollmentDetailDownloads
+Columns: enrollmentDetailId, userAgentId, ip, downloadCount, createdAt, createdBy, updatedAt, updatedBy, archivedAt        
+Table: _Archive_EnrollmentDetailNodePoints
+Columns: enrollmentDetailId, nodeId, totalPoints, totalPointsPossible, createdAt, createdBy, updatedAt, updatedBy, archivedAt
+Table: _Archive_EnrollmentDetailNodeQuestionStatistics
+Columns: enrollmentDetailId, nodeId, questionId, points, pointsPossible, secondsElapsed, createdAt, createdBy, updatedAt, updatedBy, archivedAt
+Table: _Archive_EnrollmentDetailNodeStatistics
+Columns: enrollmentDetailId, nodeId, accruedSeconds, questionAccruedSeconds, childrenComplete, answeredCount, incorrectCount, points, pointsPossible, createdAt, createdBy, updatedAt, updatedBy, archivedAt
+Table: _Archive_EnrollmentDetailNodeStatus
+Columns: enrollmentDetailId, nodeId, createdAt, createdBy, updatedAt, updatedBy, archivedAt
+Table: _Archive_EnrollmentDetailNodeTimes
+Columns: enrollmentDetailId, nodeId, accumulatedAt, seconds, createdAt, createdBy, updatedAt, updatedBy, archivedAt        
+Table: _Archive_EnrollmentDetails
+Columns: enrollmentDetailId, enrollmentId, offeringDetailId, lastNodeViewed, lastNodeViewedAt, score, isLocked, startedAt, 
+completedAt, createdAt, createdBy, updatedAt, updatedBy, archivedAt
+Table: _Archive_EnrollmentDetailTokens
+Columns: enrollmentDetailId, token, createdAt, createdBy, archivedAt
+Table: _Archive_Enrollments
+Columns: enrollmentId, personId, offeringId, personAssignmentId, startedAt, affirmedAt, completedAt, createdAt, createdBy, 
+updatedAt, updatedBy, archivedAt
+Table: _Archive_InstructorEnrollments
+Columns: instructorPersonId, enrollmentId, createdAt, createdBy, updatedAt, updatedBy, archivedAt
+Table: _Archive_PersonEvents
+Columns: personEventId, calendarId, nodeId, startTime, durationSeconds, title, shortTitle, createdAt, createdBy, updatedAt, updatedBy, archivedAt
+Table: _Archive_PersonSecurityAnswers
+Columns: personId, securityQuestionId, answer, createdAt, createdBy, updatedAt, updatedBy, archivedAt
+Table: _Archive_SecurityChallengeResponses
+Columns: securityChallengeId, securityQuestionId, attempt, response, isCorrect, createdAt, createdBy, updatedAt, updatedBy, archivedAt
+Table: _Archive_SecurityChallenges
+Columns: securityChallengeId, enrollmentDetailId, securityChallengeStatusId, sourceUrl, ruleCode, allowedAttempts, allowedSeconds, createdAt, createdBy, updatedAt, updatedBy, archivedAt
+Table: _Archive_SecurityQuestions
+Columns: securityQuestionId, question, createdAt, createdBy, updatedAt, updatedBy, archivedAt
+Table: _Archive_TestAnswerEssayMedia
+Columns: testAnswerEssayId, mediaId, createdAt, createdBy, updatedAt, updatedBy, archivedAt
+Table: _Archive_TestAnswerEssays
+Columns: testAnswerEssayId, testQuestionId, testAnswerEssayContextId, answerText, createdAt, createdBy, updatedAt, updatedBy, archivedAt
+Table: _Archive_TestAnswers
+Columns: testQuestionId, questionOptionId, createdAt, createdBy, updatedAt, updatedBy, archivedAt
+Table: _Archive_TestAttributes
+Columns: testId, key, value, createdAt, createdBy, updatedAt, updatedBy, archivedAt
+Table: _Archive_TestLog
+Columns: testLogId, testId, personId, createdAt, createdBy, dbUser, action
+Table: _Archive_TestQuestions
+Columns: testQuestionId, testId, parentQuestionId, questionId, nodeId, questionAssignmentId, sortOrder, sortSeed, points, pointsPossible, secondsElapsed, isMarkedForReview, createdAt, createdBy, updatedAt, updatedBy, archivedAt
+Table: _Archive_Tests
+Columns: testId, enrollmentDetailId, nodeId, nodeClassificationId, testStatusId, name, lastViewedTestPosition, totalQuestions, totalPoints, totalPointsPossible, totalSecondsElapsed, isInReview, startedAt, endedAt, gradedAt, createdAt, createdBy, 
+updatedAt, updatedBy, archivedAt
+Table: _Archive_TestSettings
+Columns: testId, settings, createdAt, createdBy, updatedAt, updatedBy, archivedAt
+Table: _Archive_TestsOffline
+Columns: offlineTestId, testId, createdAt, createdBy, updatedAt, updatedBy, archivedAt
+Table: _tmp_NodeStatsTimes
+Columns: nodeId, dimensionId, durationSeconds
+Table: _tmp_ParentStats
+Columns: nodeId, durationSeconds
+Table: _tmp_test_values
+Columns: testId, key, value, new_value
+Table: _tmp_TestStatusIds
+Columns: testId, testStatusId
+Table: AclResources
+Columns: resourceId, name, resource, privilege, createdAt, createdBy, updatedAt, updatedBy
+Table: AclRoles
+Columns: aclRoleId, role, description, createdAt, createdBy, updatedAt, updatedBy
+Table: AclRolesGraph
+Columns: parentAclRoleId, childAclRoleId, createdAt, createdBy, updatedAt, updatedBy
+Table: AclRules
+Columns: aclRuleId, aclRoleId, resourceId, isAllowed, createdAt, createdBy, updatedAt, updatedBy
+Table: Activities
+Columns: activityId, activityGroupId, activityTypeId, activityLabelId, sortOrder, name, content, moduleLinkId, durationMinutes, isMilestone, isPerformMilestone, createdAt, createdBy, updatedAt, updatedBy
+Table: ActivityGroupNodeRoots
+Columns: activityGroupId, nodeRootId, createdAt, createdBy, updatedAt, updatedBy
+Table: ActivityGroups
+Columns: activityGroupId, name, isArchived, createdAt, createdBy, updatedAt, updatedBy
+Table: ActivityGroupTags
+Columns: activityGroupTagId, activityGroupId, tag, createdAt, createdBy, updatedAt, updatedBy
+Table: ActivityGroupTaskGroups
+Columns: activityGroupTaskGroupId, activityGroupId, taskGroupName, createdAt, createdBy, updatedAt, updatedBy
+Table: ActivityGroupTopics
+Columns: activityGroupTopicId, activityGroupId, activityTopicWeightId, topic, createdAt, createdBy, updatedAt, updatedBy   
+Table: ActivityLabels
+Columns: activityLabelId, name, description, createdAt, createdBy, updatedAt, updatedBy
+Table: ActivityPerformanceTopics
+Columns: activityGroupId, activityId, nodeId, createdAt, createdBy, updatedAt, updatedBy
+Table: ActivityTags
+Columns: activityId, activityGroupTagId, createdAt, createdBy, updatedAt, updatedBy
+Table: ActivityTaskGroup
+Columns: activityId, activityGroupTaskGroupId, createdAt, createdBy, updatedAt, updatedBy
+Table: ActivityTopics
+Columns: activityId, activityGroupTopicId, createdAt, createdBy, updatedAt, updatedBy
+Table: ActivityTopicWeights
+Columns: activityTopicWeightId, name, createdAt, createdBy, updatedAt, updatedBy
+Table: ActivityTypes
+Columns: activityTypeId, name, description, createdAt, createdBy, updatedAt, updatedBy
+Table: AdaptivePerformanceLabels
+Columns: adaptivePerformanceLabelId, label, createdAt, createdBy, updatedAt, updatedBy
+Table: BookmarkNotes
+Columns: enrollmentDetailId, nodeId, noteText, createdAt, createdBy, updatedAt, updatedBy
+Table: CalendarDaysOffGroups
+Columns: calendarDaysOffGroupId, productGroup, productLevel, name, isArchived, createdAt, createdBy, updatedAt, updatedBy  
+Table: CalendarFixedDays
+Columns: calendarFixedDaysGroupId, nodeId, date, createdAt, createdBy, updatedAt, updatedBy
+Table: CalendarFixedDaysGroups
+Columns: calendarFixedDaysGroupId, name, calendarFixedDaysGroupTypeId, activityGroupId, nodeRootId, productGroup, productLevel, isArchived, createdAt, createdBy, updatedAt, updatedBy
+Table: CalendarFixedDaysGroupTypes
+Columns: calendarFixedDaysGroupTypeId, name, createdAt, createdBy, updatedAt, updatedBy
+Table: CalendarGroupDaysOff
+Columns: calendarDayOffId, calendarDaysOffGroupId, offDate, calendarOffDateRepeatTypeId, title, description, createdAt, createdBy, updatedAt, updatedBy
+Table: CalendarOffDateRepeatTypes
+Columns: calendarOffDateRepeatTypeId, name, createdAt, createdBy, updatedAt, updatedBy
+Table: CalendarOffDates
+Columns: calendarId, calendarOffDateRepeatTypeId, offDate, title, createdAt, createdBy, updatedAt, updatedBy
+Table: Calendars
+Columns: calendarId, personId, createdAt, createdBy, updatedAt, updatedBy
+Table: ContentMedia
+Columns: contentId, mediaId, createdAt, createdBy, updatedAt, updatedBy
+Table: ContentModuleLinks
+Columns: contentId, moduleLinkId, createdAt, createdBy, updatedAt, updatedBy
+Table: Contents
+Columns: contentId, contentTypeId, contentText, hash, createdAt, createdBy, updatedAt, updatedBy
+Table: ContentTypes
+Columns: contentTypeId, name, description, createdAt, createdBy, updatedAt, updatedBy
+Table: ContentUcms
+Columns: contentId, ucmsId, ucmsTypeId, createdAt, createdBy, updatedAt, updatedBy
+Table: DashboardViews
+Columns: dashboardViewId, name, createdAt, createdBy, updatedAt, updatedBy
+Table: DATABASECHANGELOG
+Columns: ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, EXECTYPE, MD5SUM, DESCRIPTION, COMMENTS, TAG, LIQUIBASE        
+Table: DATABASECHANGELOGLOCK
+Columns: ID, LOCKED, LOCKGRANTED, LOCKEDBY
+Table: DimensionImportHistory
+Columns: dimensionId, systemId, importerId, foreignId, isSubset, createdAt, createdBy
+Table: DimensionReferences
+Columns: dimensionId, systemId, importerId, foreignId, createdAt, createdBy, updatedAt, updatedBy
+Table: Dimensions
+Columns: dimensionId, dimensionTypeId, nodeRootId, name, createdAt, createdBy, updatedAt, updatedBy
+Table: DimensionTypes
+Columns: dimensionTypeId, name, description, createdAt, createdBy, updatedAt, updatedBy
+Table: DiscussionMedia
+Columns: discussionId, sortOrder, mediaId, createdAt, createdBy, updatedAt, updatedBy
+Table: DiscussionMessages
+Columns: discussionId, sortOrder, personId, messageText, isRead, createdAt, createdBy, updatedAt, updatedBy
+Table: DiscussionNodes
+Columns: discussionId, nodeId, dimensionId, createdAt, createdBy, updatedAt, updatedBy
+Table: DiscussionOfferings
+Columns: discussionId, offeringId, createdAt, createdBy, updatedAt, updatedBy
+Table: DiscussionQuestions
+Columns: discussionId, questionId, createdAt, createdBy, updatedAt, updatedBy
+Table: Discussions
+Columns: discussionId, personId, discussionTypeId, subject, isArchived, emailed, offeringGroup, createdAt, createdBy, updatedAt, updatedBy
+Table: DiscussionTypes
+Columns: discussionTypeId, name, description, createdAt, createdBy, updatedAt, updatedBy
+Table: DomTest
+Columns: domtestId, n
+Table: EnrollmentDetailActivityGroupTopics
+Columns: enrollmentDetailId, activityGroupTopicId, sortOrder, createdAt, createdBy, updatedAt, updatedBy
+Table: EnrollmentDetailActivityStatus
+Columns: enrollmentDetailId, activityId, isComplete, markedForReview, completedAt, createdAt, createdBy, updatedAt, updatedBy
+Table: EnrollmentDetailCalendars
+Columns: enrollmentDetailId, calendarId, startDate, endDate, hash, createdAt, createdBy, updatedAt, updatedBy
+Table: EnrollmentDetailDownloads
+Columns: enrollmentDetailId, userAgentId, ip, downloadCount, createdAt, createdBy, updatedAt, updatedBy
+Table: EnrollmentDetailHighlights
+Columns: enrollmentDetailId, testId, key, value, range, createdAt, createdBy, updatedAt, updatedBy
+Table: EnrollmentDetailLinks
+Columns: enrollmentDetailId, linkId, createdAt, createdBy, updatedAt, updatedBy
+Table: EnrollmentDetailNodeAdaptiveRatings
+Columns: enrollmentDetailNodeAdaptiveRatingId, enrollmentDetailId, nodeId, rating, adaptivePerformanceLabelId, questionId, 
+parentQuestionId, createdAt, createdBy, updatedAt, updatedBy
+Table: EnrollmentDetailNodePoints
+Columns: enrollmentDetailId, nodeId, totalPoints, totalPointsPossible, createdAt, createdBy, updatedAt, updatedBy
+Table: EnrollmentDetailNodeQuestionBookmarkNotes
+Columns: enrollmentDetailId, nodeId, questionId, noteText, createdAt, createdBy, updatedAt, updatedBy
+Table: EnrollmentDetailNodeQuestionStatistics
+Columns: enrollmentDetailId, nodeId, questionId, points, pointsPossible, secondsElapsed, createdAt, createdBy, updatedAt, updatedBy
+Table: EnrollmentDetailNodeStatistics
+Columns: enrollmentDetailId, nodeId, accruedSeconds, questionAccruedSeconds, childrenComplete, answeredCount, incorrectCount, points, pointsPossible, createdAt, createdBy, updatedAt, updatedBy
+Table: EnrollmentDetailNodeStatus
+Columns: enrollmentDetailId, nodeId, createdAt, createdBy, updatedAt, updatedBy
+Table: EnrollmentDetailNodeTimes
+Columns: enrollmentDetailId, nodeId, accumulatedAt, seconds, createdAt, createdBy, updatedAt, updatedBy
+Table: EnrollmentDetails
+Columns: enrollmentDetailId, enrollmentId, offeringDetailId, lastNodeViewed, lastNodeViewedAt, lastViewedAt, score, isLocked, startedAt, completedAt, createdAt, createdBy, updatedAt, updatedBy
+Table: EnrollmentDetails-trav
+Columns: enrollmentId, personId, assignmentId, offeringid, createdAt, createdBy, updatedBy
+Table: EnrollmentDetailSettings
+Columns: enrollmentDetailId, settings, createdAt, createdBy, updatedAt, updatedBy
+Table: EnrollmentDetailTokens
+Columns: enrollmentDetailId, token, createdAt, createdBy
+Table: EnrollmentDetailUcmsStatistics
+Columns: enrollmentDetailId, nodeId, ucmsId, accruedSeconds, lastViewedAt, ucmsPollId, createdAt, createdBy, updatedAt, updatedBy
+Table: EnrollmentDetailVideoChannels
+Columns: enrollmentDetailId, videoChannelId, ucmsId, createdAt, createdBy, updatedAt, updatedBy
+Table: EnrollmentDetailVouchers
+Columns: enrollmentDetailId, voucher, createdAt, createdBy, updatedAt, updatedBy
+Table: EnrollmentPortalCodes
+Columns: enrollmentId, portalCode, createdAt, createdBy, updatedAt, updatedBy
+Table: Enrollments
+Columns: enrollmentId, personId, offeringId, personAssignmentId, startedAt, affirmedAt, completedAt, createdAt, createdBy, 
+updatedAt, updatedBy
+Table: EnrollmentSettings
+Columns: enrollmentId, settings, createdAt, createdBy, updatedAt, updatedBy
+Table: EnrollmentsHistory
+Columns: enrollmentId, personId, personAssignmentId, createdAt, createdBy
+Table: ExamWeighting
+Columns: nodeId, weightingNameId, dimensionId, count, createdAt, createdBy, updatedAt, updatedBy
+Table: ExamWeightingNames
+Columns: weightingNameId, weightingName, suffix, weightingParams, createdAt, createdBy, updatedAt, updatedBy
+Table: Features
+Columns: featureId, name, createdAt, createdBy, updatedAt, updatedBy
+Table: FederationTokens
+Columns: personId, token, data, createdAt, createdBy
+Table: FixedTestQuestions
+Columns: fixedTestId, questionId, sortOrder, createdAt, createdBy, updatedAt, updatedBy
+Table: FixedTests
+Columns: fixedTestId, offeringDetailId, name, isShuffled, isActive, createdAt, createdBy, updatedAt, updatedBy
+Table: FolderRootFeatures
+Columns: folderRootId, featureId, offeringId, folderId, sortOrder, createdAt, createdBy, updatedAt, updatedBy
+Table: FolderRoots
+Columns: folderRootId, folderRootName, createdAt, createdBy, updatedAt, updatedBy
+Table: Folders
+Columns: folderId, parentFolderId, folderTypeId, folderRootId, name, lft, rgt, height, depth, sortOrder, createdAt, createdBy, updatedAt, updatedBy
+Table: FolderTypes
+Columns: folderTypeId, name, createdAt, createdBy, updatedAt, updatedBy
+Table: Glossary
+Columns: glossaryId, dimensionId, term, definition, createdAt, createdBy, updatedAt, updatedBy
+Table: GradingScaleScoreRangeDisplays
+Columns: gradingScaleScoreRangeDisplayId, gradingScaleScoreId, minScore, maxScore, displayScore, createdAt, createdBy, updatedAt, updatedBy
+Table: GradingScaleScores
+Columns: gradingScaleScoreId, name, attribute, minRange, maxRange, createdAt, createdBy, updatedAt, updatedBy
+Table: Highlights
+Columns: highlightId, enrollmentDetailId, highlightTypeId, startPosition, endPosition, count, colour, createdAt, createdBy, updatedAt, updatedBy
+Table: HighlightTexts
+Columns: highlightTextId, highlightId, highlightText, createdAt, createdBy, updatedAt, updatedBy
+Table: HighlightTypes
+Columns: highlightTypeId, highlightName, createdAt, createdBy, updatedAt, updatedBy
+Table: IdentifiersNotNowLogs
+Columns: personId, offeringGroup, createdAt, createdBy, updatedAt, updatedBy
+Table: ImpersonatorLogs
+Columns: impersonatorLogId, impersonatorId, personId, isWrite, createdAt, createdBy, updatedAt, updatedBy
+Table: Importers
+Columns: importerId, name, createdAt, createdBy, updatedAt, updatedBy
+Table: InstructorEnrollments
+Columns: instructorPersonId, enrollmentId, createdAt, createdBy, updatedAt, updatedBy
+Table: InstructorLinkProductMessages
+Columns: productGroup, productLevel, productSubLevel, discussionTypeId, title, message, email, createdAt, createdBy, updatedAt, updatedBy
+Table: InstructorsOnline
+Columns: instructorId, productGroup, productLevel, isOnline, createdAt, createdBy, updatedAt, updatedBy
+Table: Media
+Columns: mediaId, hash, sourceId, filename, extension, isSecure, createdAt, createdBy, updatedAt, updatedBy
+Table: MediaSources
+Columns: sourceId, name, createdAt, createdBy, updatedAt, updatedBy
+Table: ModuleLinkPageParams
+Columns: moduleLinkId, key, value, createdAt, createdBy, updatedAt, updatedBy
+Table: ModuleLinks
+Columns: moduleLinkId, linkName, description, offeringDetailId, pageType, hash, isArchived, createdAt, createdBy, updatedAt, updatedBy
+Table: NodeAttributes
+Columns: nodeId, key, value, createdAt, createdBy, updatedAt, updatedBy
+Table: NodeClassifications
+Columns: nodeClassificationId, name, description, createdAt, createdBy, updatedAt, updatedBy
+Table: NodeDifficultyStatistics
+Columns: nodeId, dimensionId, difficultyId, count, createdAt, createdBy, updatedAt, updatedBy
+Table: NodeDimensionReferences
+Columns: nodeId, dimensionId, foreignId, createdAt, createdBy, updatedAt, updatedBy
+Table: NodeDimensions
+Columns: nodeId, dimensionId, contentId, nodeClassificationId, createdAt, createdBy, updatedAt, updatedBy
+Table: NodeDimensionsHistory
+Columns: nodeId, dimensionId, contentId, nodeClassificationId, createdAt, createdBy
+Table: NodeGraph
+Columns: startNodeId, endNodeId, sortOrder, createdAt, createdBy, updatedAt, updatedBy
+Table: NodeRoots
+Columns: nodeRootId, name, createdAt, createdBy, updatedAt, updatedBy
+Table: Nodes
+Columns: nodeId, nodeRootId, parentNodeId, nodeTypeId, lft, rgt, page, depth, height, title, shortTitle, createdAt, createdBy, updatedAt, updatedBy
+Table: Nodes_12052023_backup_dba
+Columns: nodeId, nodeRootId, parentNodeId, nodeTypeId, lft, rgt, page, depth, height, title, shortTitle, createdAt, createdBy, updatedAt, updatedBy
+Table: NodeStatistics
+Columns: nodeId, dimensionId, nodeCount, durationSeconds, questionCount, hasItemSet, createdAt, createdBy, updatedAt, updatedBy
+Table: NodeStatistics_12052023_backup_dba
+Columns: nodeId, dimensionId, nodeCount, durationSeconds, questionCount, hasItemSet, createdAt, createdBy, updatedAt, updatedBy
+Table: NodeTagDifficultyStatistics
+Columns: nodeId, dimensionId, difficultyId, questionTag, count, createdAt, createdBy, updatedAt, updatedBy
+Table: NodeTagStatistics
+Columns: nodeId, dimensionId, questionTag, questionCount, hasItemSet, nodeCount, createdAt, createdBy, updatedAt, updatedByTable: NodeTaxonomy
+Columns: nodeId, taxonomyTypeId, createdAt, createdBy, updatedAt, updatedBy
+Table: NodeTypes
+Columns: nodeTypeId, name, description, createdAt, createdBy, updatedAt, updatedBy
+Table: NotificationOfferings
+Columns: notificationId, offeringId, createdAt, createdBy, updatedAt, updatedBy
+Table: Notifications
+Columns: notificationId, text, url, includeNewEnrollments, startsAt, expiresAt, createdAt, createdBy, updatedAt, updatedBy 
+Table: OfferingDetailActivityGroups
+Columns: offeringDetailId, activityGroupId, sortOrder, createdAt, createdBy, updatedAt, updatedBy
+Table: OfferingDetailClassifications
+Columns: offeringDetailId, offeringDetailSubTypeId, createdAt, createdBy, updatedAt, updatedBy
+Table: OfferingDetailNodeRoots
+Columns: offeringDetailId, nodeRootId, dimensionId, sortOrder, createdAt, createdBy, updatedAt, updatedBy
+Table: OfferingDetails
+Columns: offeringDetailId, offeringDetailTypeId, name, isArchived, showProgress, includeVideos, isMobileEnabled, createdAt, createdBy, updatedAt, updatedBy
+Table: OfferingDetailSubTypes
+Columns: offeringDetailSubTypeId, name, offeringDetailTypeId, nodeClassificationId, createdAt, createdBy, updatedAt, updatedBy
+Table: OfferingDetailTypes
+Columns: offeringDetailTypeId, name, description, createdAt, createdBy, updatedAt, updatedBy
+Table: OfferingOfferingDetails
+Columns: offeringId, offeringDetailId, folderId, sortOrder, relation, createdAt, createdBy, updatedAt, updatedBy
+Table: Offerings
+Columns: offeringId, productGroup, productLevel, name, description, folderRootId, isAnchored, isArchived, isPublished, firstEnrolledAt, createdAt, createdBy, updatedAt, updatedBy
+Table: PersonAccountAclRoles
+Columns: personId, aclRoleId, createdAt, createdBy, updatedAt, updatedBy
+Table: PersonAccountHistory
+Columns: personAccountHistoryId, personId, username, password, displayName, lockoutStartTime, updatedAt, updatedBy, dbUser 
+Table: PersonAccounts
+Columns: personId, lastViewedEnrollmentDetailId, lastSecurityChallengeStatusId, themeId, username, password, displayName, currentProductGroup, currentProductLevel, lastLoginAt, lastUrl, passwordUpdatedAt, failedLoginAttempts, lockoutStartTime, unreadNotificationCount, nextNotificationSendTime, emailNotifications, isActive, createdAt, createdBy, updatedAt, updatedBy  
+Table: PersonAccountTokens
+Columns: personId, token, createdAt, createdBy
+Table: PersonActivities
+Columns: personActivityId, calendarId, activityId, date, activityDuration, hasPrevious, hasNext, isMultiDayActivity, isVisible, createdAt, createdBy, updatedAt, updatedBy
+Table: PersonActivitiesTrav
+Columns: personActivityId
+Table: PersonEvents
+Columns: personEventId, calendarId, nodeId, startTime, durationSeconds, title, shortTitle, createdAt, createdBy, updatedAt, updatedBy
+Table: PersonForumSettings
+Columns: personId, displayName, createdAt, createdBy, updatedAt, updatedBy
+Table: PersonNotifications
+Columns: personNotificationId, personId, notificationId, isRead, createdAt, createdBy, updatedAt, updatedBy
+Table: PersonOfferingGroupSettings
+Columns: personId, offeringGroup, dashboardViewId, myProgressToggleFlag, createdAt, createdBy, updatedAt, updatedBy        
+Table: PersonPasswordResetTokens
+Columns: personId, token, createdAt, createdBy
+Table: PersonSecurityAnswers
+Columns: personId, securityQuestionId, answer, createdAt, createdBy, updatedAt, updatedBy
+Table: ProctorExamSites
+Columns: proctorExamSiteId, name, description, createdAt, createdBy, updatedAt, updatedBy
+Table: ProctorIdentificationTypes
+Columns: proctorIdentificationTypeId, name, description, createdAt, createdBy, updatedAt, updatedBy
+Table: ProctortrackOnboardingStatuses
+Columns: personId, proctortrackStatusId, createdAt, createdBy, updatedAt, updatedBy
+Table: ProctortrackStatuses
+Columns: proctortrackStatusId, status, createdAt, createdBy, updatedAt, updatedBy
+Table: ProctortrackTestStatuses
+Columns: testId, proctortrackStatusId, createdAt, createdBy, updatedAt, updatedBy
+Table: QuestionAssignments
+Columns: questionAssignmentId, questionId, contentId, questionDifficultyId, referenceCode, sortOrder, createdAt, createdBy, updatedAt, updatedBy
+Table: QuestionAttributes
+Columns: questionId, dimensionId, key, value, createdAt, createdBy, updatedAt, updatedBy
+Table: QuestionBlankAnswerVariations
+Columns: questionBlankId, answerVariation, caseSensitive, createdAt, createdBy, updatedAt, updatedBy
+Table: QuestionBlanks
+Columns: questionBlankId, questionId, sortOrder, createdAt, createdBy, updatedAt, updatedBy
+Table: QuestionChildren
+Columns: parentQuestionId, questionId, contentId, sortOrder, createdAt, createdBy, updatedAt, updatedBy
+Table: QuestionDifficulties
+Columns: questionDifficultyId, name, createdAt, createdBy, updatedAt, updatedBy
+Table: QuestionDimensionAdaptiveRatings
+Columns: questionId, dimensionId, rating, createdAt, createdBy, updatedAt, updatedBy
+Table: QuestionGradingCategories
+Columns: questionGradingCategoryId, name, description, isArchived, createdAt, createdBy, updatedAt, updatedBy
+Table: QuestionGradingCategoryGroups
+Columns: questionGradingGroupId, questionGradingCategoryId, createdAt, createdBy, updatedAt, updatedBy
+Table: QuestionGradingGroups
+Columns: questionGradingGroupId, name, description, isPublished, isArchived, createdAt, createdBy, updatedAt, updatedBy    
+Table: QuestionGradingScores
+Columns: questionGradingScoreId, name, description, score, createdAt, createdBy, updatedAt, updatedBy
+Table: QuestionMedia
+Columns: questionId, mediaId, createdAt, createdBy, updatedAt, updatedBy
+Table: QuestionMetadatas
+Columns: questionId, dimensionId, key, value, createdAt, createdBy, updatedAt, updatedBy
+Table: QuestionOptions
+Columns: questionOptionId, questionId, optionText, isCorrect, points, explanation, createdAt, createdBy, updatedAt, updatedBy
+Table: QuestionReferences
+Columns: questionId, systemId, foreignId, createdAt, createdBy, updatedAt, updatedBy
+Table: Questions
+Columns: questionId, questionTypeId, questionText, explanation, pointsPossible, hash, createdAt, createdBy, updatedAt, updatedBy
+Table: QuestionSections
+Columns: questionSectionId, questionId, issue, rules, analysis, conclusion, weight, createdAt, createdBy, updatedAt, updatedBy
+Table: QuestionTags
+Columns: questionId, dimensionId, tag, createdAt, createdBy, updatedAt, updatedBy
+Table: QuestionTaxonomy
+Columns: questionId, taxonomyTypeId, createdAt, createdBy, updatedAt, updatedBy
+Table: QuestionTypes
+Columns: questionTypeId, name, displayName, description, createdAt, createdBy, updatedAt, updatedBy
+Table: QuestionUcms
+Columns: questionId, ucmsId, createdAt, createdBy, updatedAt, updatedBy
+Table: RefreshTokens
+Columns: refreshTokenId, personId, lifetime, createdAt, createdBy, updatedAt, updatedBy
+Table: RemotePersons
+Columns: remotePersonId, portalCode, personId, type, createdAt, createdBy, updatedAt, updatedBy
+Table: ScormStatistics
+Columns: registrationId, nodeId, enrollmentDetailId, dimensionId, scorePercentage, completedAt, createdAt, createdBy, updatedAt, updatedBy
+Table: SecurityChallengeResponses
+Columns: securityChallengeId, securityQuestionId, attempt, response, isCorrect, createdAt, createdBy, updatedAt, updatedBy, securityQuestionMetadata, correctAnswer
+Table: SecurityChallenges
+Columns: securityChallengeId, enrollmentDetailId, securityChallengeStatusId, securityQuestionTypeId, sourceUrl, ruleCode, allowedAttempts, allowedSeconds, createdAt, createdBy, updatedAt, updatedBy
+Table: SecurityChallengeStatuses
+Columns: securityChallengeStatusId, securityChallengeStatus, createdAt, createdBy, updatedAt, updatedBy
+Table: SecurityQuestions
+Columns: securityQuestionId, question, securityQuestionTypeId, createdAt, createdBy, updatedAt, updatedBy
+Table: SecurityQuestionTypes
+Columns: securityQuestionTypeId, name, createdAt, createdBy, updatedAt, updatedBy
+Table: SessionClients
+Columns: sessionClientId, name, createdAt, createdBy, updatedAt, updatedBy
+Table: Sessions
+Columns: sessionId, personId, domain, data, sessionClientId, modified, lifetime, createdAt, updatedAt
+Table: SiteMessages
+Columns: siteMessageId, message, section, startTime, expirationTime, createdAt, createdBy, updatedAt, updatedBy
+Table: StudyPlanDaysOff
+Columns: enrollmentDetailId, offDate, createdAt, createdBy, updatedAt, updatedBy
+Table: StudyPlanDurations
+Columns: enrollmentDetailId, startDate, endDate, dailyDuration, createdAt, createdBy, updatedAt, updatedBy
+Table: StudyPlanFixedDays
+Columns: calendarFixedDaysGroupId, activityId, date, createdAt, createdBy, updatedAt, updatedBy
+Table: Systems
+Columns: systemId, name, createdAt, createdBy, updatedAt, updatedBy
+Table: TaxonomyTypes
+Columns: taxonomyTypeId, name, createdAt, createdBy, updatedAt, updatedBy
+Table: TestAnswerBlanks
+Columns: testQuestionId, questionBlankId, answerText, isCorrect, createdAt, createdBy, updatedAt, updatedBy
+Table: TestAnswerEssayContexts
+Columns: testAnswerEssayContextId, name, createdAt, createdBy, updatedAt, updatedBy
+Table: TestAnswerEssayHighlights
+Columns: testId, testAnswerEssayId, highlightId
+Table: TestAnswerEssayMedia
+Columns: testAnswerEssayId, mediaId, createdAt, createdBy, updatedAt, updatedBy
+Table: TestAnswerEssays
+Columns: testAnswerEssayId, testQuestionId, testAnswerEssayContextId, answerText, createdAt, createdBy, updatedAt, updatedBy
+Table: TestAnswers
+Columns: testQuestionId, questionOptionId, createdAt, createdBy, updatedAt, updatedBy
+Table: TestAttributes
+Columns: testId, key, value, createdAt, createdBy, updatedAt, updatedBy
+Table: TestCreditHours
+Columns: testId, orgCode, creditHours, createdAt, createdBy, updatedAt, updatedBy
+Table: TestNodeStatistics
+Columns: nodeId, dimensionId, answeredCount, incorrectCount, secondsElapsed, points, pointsPossible, createdAt, createdBy, 
+updatedAt, updatedBy
+Table: TestProctorForms
+Columns: testId, proctorPersonId, proctorRelationType, proctorExamSiteId, proctorIdentificationTypeId, validatedAt, pendingTestStatusId, createdAt, createdBy, updatedAt, updatedBy
+Table: TestProctorViolation
+Columns: testId, proctorType, violationReason, proctorName, createdAt, createdBy, updatedAt, updatedBy
+Table: TestQuestionActivityStates
+Columns: testQuestionId, state, createdAt, createdBy, updatedAt, updatedBy
+Table: TestQuestionCategoryScores
+Columns: testQuestionId, questionGradingCategoryId, questionGradingScoreId, createdAt, createdBy, updatedAt, updatedBy     
+Table: TestQuestionHighlights
+Columns: testId, questionId, highlightId
+Table: TestQuestionOptionStrikeThroughs
+Columns: testQuestionId, questionOptionId, createdAt, createdBy, updatedAt, updatedBy
+Table: TestQuestions
+Columns: testQuestionId, testId, parentQuestionId, questionId, nodeId, questionAssignmentId, sortOrder, sortSeed, points, pointsPossible, secondsElapsed, isMarkedForReview, createdAt, createdBy, updatedAt, updatedBy
+Table: TestQuestionSectionScores
+Columns: testQuestionId, questionSectionId, questionGradingScoreId, createdAt, createdBy, updatedAt, updatedBy
+Table: Tests
+Columns: testId, enrollmentDetailId, nodeId, nodeClassificationId, testStatusId, name, lastViewedTestPosition, totalQuestions, totalPoints, totalPointsPossible, totalSecondsElapsed, isInReview, startedAt, endedAt, gradedAt, createdAt, createdBy, 
+updatedAt, updatedBy
+Table: TestSettings
+Columns: testId, settings, createdAt, createdBy, updatedAt, updatedBy
+Table: TestsOffline
+Columns: offlineTestId, testId, createdAt, createdBy, updatedAt, updatedBy
+Table: TestStatuses
+Columns: testStatusId, testStatus, createdAt, createdBy, updatedAt, updatedBy
+Table: TourGroups
+Columns: tourGroupId, name, isArchived, createdAt, createdBy, updatedAt, updatedBy
+Table: TourGroupTours
+Columns: tourGroupId, tourId, createdAt, createdBy, updatedAt, updatedBy
+Table: TourLegs
+Columns: tourLegId, tourLegTypeId, tourTargetId, targetParam, content, createdAt, createdBy, updatedAt, updatedBy
+Table: TourLegTypes
+Columns: tourLegTypeId, name, createdAt, createdBy, updatedAt, updatedBy
+Table: Tours
+Columns: tourId, name, page, createdAt, createdBy, updatedAt, updatedBy
+Table: TourTargets
+Columns: tourTargetId, name, tourTargetTypeId, value, createdAt, createdBy, updatedAt, updatedBy
+Table: TourTargetTypes
+Columns: tourTargetTypeId, name, createdAt, createdBy, updatedAt, updatedBy
+Table: TourTourLegs
+Columns: tourId, tourLegId, sortOrder, createdAt, createdBy, updatedAt, updatedBy
+Table: TravNodes
+Columns: NodeId
+Table: Ucms
+Columns: ucmsId, title, productId, productGroup, isArchived, isEditable, createdAt, createdBy, updatedAt, updatedBy, ucmsContentGroupId
+Table: UcmsAssignments
+Columns: ucmsId, contentId, createdAt, createdBy, updatedAt, updatedBy
+Table: UcmsContentGroups
+Columns: ucmsContentGroupId, name, assetCount, createdAt, createdBy, updatedAt, updatedBy
+Table: UcmsHostAccounts
+Columns: ucmsHostAccountId, ucmsHostTypeId, accountId, accountName, ucmsHostTypeAccountId, clientId, clientSecret, username, password, policyKey, createdAt, createdBy, updatedAt, updatedBy
+Table: UcmsHosts
+Columns: ucmsHostId, ucmsId, ucmsHostTypeId, isActive, isEditable, createdAt, createdBy, updatedAt, updatedBy
+Table: UcmsHostSeminars
+Columns: ucmsHostId, ucmsHostTypeId, ucmsHostForeignId, startDate, durationMinutes, ucmsHostAccountId, instructorId, groupName, ucmsRoomTypeId, ucmsHostSeminarSubTypeId, roomVerified, ucmsHostAlternateForeignId, createdAt, createdBy, updatedAt, updatedBy
+Table: UcmsHostSeminarSubTypes
+Columns: ucmsHostSeminarSubTypeId, name, ucmsHostTypeId, createdAt, createdBy, updatedAt, updatedBy
+Table: UcmsHostTypeAccounts
+Columns: ucmsHostTypeAccountId, ucmsHostTypeId, name, createdAt, createdBy, updatedAt, updatedBy
+Table: UcmsHostTypes
+Columns: ucmsHostTypeId, name, createdAt, createdBy, updatedAt, updatedBy
+Table: UcmsHostVideos
+Columns: ucmsHostId, ucmsHostTypeId, ucmsHostForeignId, cuePoints, createdAt, createdBy, updatedAt, updatedBy
+Table: UcmsPollQuestions
+Columns: ucmsPollQuestionId, ucmsPollId, securityQuestionId, displayAt, isAnswered, createdAt, createdBy, updatedAt, updatedBy
+Table: UcmsPolls
+Columns: ucmsPollId, ucmsId, createdAt, createdBy, updatedAt, updatedBy
+Table: UcmsPollVisibility
+Columns: ucmsPollQuestionId, isPollVisible, visibleAt, mouseMoved, createdAt, createdBy, updatedAt, updatedBy
+Table: UcmsProductHostMappings
+Columns: ucmsProductHostMappingId, productGroup, productLevel, orgCodes, name, ucmsHostTypeId, ucmsHostAccountId, ucmsHostSeminarSubTypeId, ucmsHostTypeAccountId
+Table: UcmsRoomTypes
+Columns: ucmsRoomTypeId, name, createdAt, createdBy, updatedAt, updatedBy
+Table: UcmsStatistics
+Columns: ucmsId, enrollmentDetailId, currentPosition, maxPosition, createdAt, createdBy, updatedAt, updatedBy
+Table: UcmsTypes
+Columns: ucmsTypeId, name, description, createdAt, createdBy, updatedAt, updatedBy
+Table: UserAgents
+Columns: userAgentId, userAgent, createdAt, createdBy
+Table: VideoChannels
+Columns: videoChannelId, name, createdAt, createdBy, updatedAt, updatedBy
